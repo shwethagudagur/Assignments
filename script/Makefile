@@ -9,7 +9,7 @@ SRC = ./src
 
 all: emp1
 
-Emp1: $(OBJ)/emp1.o
+emp1: $(OBJ)/emp1.o
 	$(CC) $(LFLAGS) $(BIN)/emp1 $(OBJ)/emp1.o
 
 $(OBJ)/emp1.o:$(SRC)/emp1.cpp

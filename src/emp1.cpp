@@ -1,6 +1,9 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <sys/types.h>
+#include <unistd.h>
+#include <sys/wait.h>
 using namespace std;
 
 class Employee{
@@ -33,6 +36,7 @@ public:
 	cout<<"Record added"<<endl;
 	}
 	
+	
 	void displayall(){
 	Employee e(123,"shwetha",1000);
 	file.open("emp.dat",ios::in);
@@ -46,9 +50,10 @@ public:
 	file.close();
 }
 
+
 	int main(){
 
 	appendToFile();
 	displayall();
-
+     return 0;
 	}
